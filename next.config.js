@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  // Set basePath and assetPrefix for GitHub Pages deployment
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/PolarisWebsite/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/PolarisWebsite' : '',
+  
+  // ESLint configuration (we use Biome for linting)
   eslint: {
-    // we use biome for linting
     ignoreDuringBuilds: true,
   },
+  
+  // Image configuration
   images: {
     unoptimized: true,
     domains: [
@@ -36,11 +41,10 @@ const nextConfig = {
       },
     ],
   },
+  
+  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 
