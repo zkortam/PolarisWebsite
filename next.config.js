@@ -8,7 +8,7 @@ const nextConfig = {
   output: 'export',
   
   eslint: {
-    // We use Biome for linting; ignore ESLint errors during builds
+  
     ignoreDuringBuilds: true,
   },
   
