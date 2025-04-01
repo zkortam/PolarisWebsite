@@ -1,15 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Set basePath and assetPrefix for GitHub Pages deployment
+  // Configure basePath and assetPrefix for GitHub Pages
   assetPrefix: process.env.NODE_ENV === 'production' ? '/PolarisWebsite/' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/PolarisWebsite' : '',
   
-  // ESLint configuration (we use Biome for linting)
+  // Enable experimental static export for the app directory
+  experimental: {
+    output: 'export',
+  },
+  
   eslint: {
+    // We use Biome for linting; ignore ESLint errors during builds
     ignoreDuringBuilds: true,
   },
   
-  // Image configuration
   images: {
     unoptimized: true,
     domains: [
@@ -42,7 +46,6 @@ const nextConfig = {
     ],
   },
   
-  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
   },
