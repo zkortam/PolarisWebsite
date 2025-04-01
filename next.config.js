@@ -4,10 +4,8 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? '/PolarisWebsite/' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/PolarisWebsite' : '',
   
-  // Enable experimental static export for the app directory
-  experimental: {
-    output: 'export',
-  },
+  // Enable static export
+  output: 'export',
   
   eslint: {
     // We use Biome for linting; ignore ESLint errors during builds
