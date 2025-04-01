@@ -2,15 +2,14 @@
   "name": "polaris-campaign",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start -H 0.0.0.0",
-    "lint": "next lint",
-    "format": "bunx biome format --write ./src",
-    "deploy": "npm run build && npm run export && gh-pages -d out"
-  },
+"scripts": {
+  "dev": "next dev -H 0.0.0.0",
+  "build": "next build",
+  "start": "next start -H 0.0.0.0",
+  "lint": "next lint",
+  "format": "bunx biome format --write ./src",
+  "deploy": "npm run build && gh-pages -d out"
+},
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-avatar": "^1.1.3",
